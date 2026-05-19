@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar{background-color:black;
+        color:white;
+    text-align:center;}
+        ul, li{display:inline-block;
+        margin-right:25px;
+    justify-content:space-around;
+font-weight:bold;
+font-size:larger;}
+ li:hover{color:black;
+background-color:white;}
+
+label{display:inline-block;
+margin-left:3cm;}
+    </style>
+</head>
+<body>
+    <form onsubmit="return validateform()" action="abc.html">
+   <nav class="navbar">
+        <div class="navdiv">
+            <ul>
+                <li>HOME</li>
+                  <li>ABOUT US</li>
+                    <li>SERVICES</li>
+                      <li>CONTACT US</li>
+            </ul>
+        </div>
+    </nav> 
+    <h1>Welcome to our Website</h1>
+    <hr>
+    <h2>Contact Us</h2>
+    <p>Sample text comes here.
+        Sample text comes here.
+        Sample text comes here.
+        Sample text comes here.
+        Sample text comes here.
+    </p>
+    <hr>
+       Name<br>
+    <label><input type="text" id="name"></label><br>
+    Email<br>
+    <label><input type="text" id="email"></label><br>
+    Comments<br>
+    <label><textarea id="text"></textarea></label><br>
+    <input type="submit" value="Submit">
+</form>
+<script>
+    function validateform(){
+        var a=document.getElementById("name").value;
+         var b=document.getElementById("email").value;
+          var c=document.getElementById("text").value;
+         if(a==""||b==""||c=="")
+        { alert("Please fill all the fields");
+        return false;}
+        else if(!b.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)){
+                    alert("Email should be in correct format");
+                    return false;
+                }
+                else true;
+    }
+</script>
+</body>
+</html>
